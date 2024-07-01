@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Decodificador</title>
+
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./script.js"></script>
+</head>
+
+<body>
+
+  <main class="container">
+    <div class="column1">
+      <header class="logo">
+        <h1>logo</h1>
+      </header>
+      <textarea name="text_field" id="text_field" class="text_field" placeholder="digite seu texto"
+        onkeydown="digitar()"></textarea>
+      <div class="buttons">
+        <div class="warning">
+          <span class="icon"><img src="./assets/bi_exclamation-circle-fill.png" alt=""></span>
+          <span class="text_warning">Apenas letras minúsculas e sem acento.</span>
+        </div>
+        <div class="button_action">
+          <button class="btn cript" onclick="criptografar()">Criptografar</button>
+          <button class="btn descript" onclick="descriptografar()">Descriptografar</button>
+        </div>
+      </div>
+    </div>
+    <div class="column2">
+      <div class="img_container">
+        <img class="img_search" src="./assets/img_search.png" alt="four people searching for something">
+      </div>
+      <div class="no_msg_text">
+        <h2 class="no_msg_text_h2">Nenhuma mensagem encontrada</h2>
+        <span class="no_msg_text_p">Digite um texto que você deseja criptografar ou descriptografar.</span>
+        <p class="p_style"></p>
+      </div>
+      <div class="copy">
+        <button class="btn btn_copy">Copiar</button>
+      </div>
+    </div>
+  </main>
+  <footer></footer>
+</body>
+
+</html>

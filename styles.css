@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+h1,
+h2,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #fff4e2;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  height: 90vh;
+}
+
+.column1 {
+  display: grid;
+  grid-template-rows: 1fr 3fr 1fr;
+}
+
+.logo {
+  padding-left: 20px;
+}
+
+#text_field {
+  background-color: transparent;
+  border: none;
+  font-size: 2rem;
+  font-family: "Inter", sans-serif;
+  padding-left: 150px;
+  outline: 0;
+}
+
+textarea::placeholder {
+  color: rgb(135, 134, 134);
+}
+
+.buttons {
+  padding-left: 150px;
+}
+
+.warning {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 16px;
+}
+
+.text_warning {
+  font-size: 12px;
+  font-family: "Inter", sans-serif;
+  color: rgb(101, 101, 101);
+}
+
+.btn {
+  padding: 14px;
+  border-radius: 18px;
+  font-size: 16px;
+  font-family: "Inter", sans-serif;
+  width: 300px;
+  cursor: pointer;
+  transition: all 0.8s ease;
+}
+
+.button_action .cript {
+  background-color: #e7720bff;
+  border: 2px solid #e7720bff;
+  color: #fff4e2;
+  margin-right: 24px;
+  margin-bottom: 5px;
+}
+
+.button_action .cript:hover {
+  background-color: rgb(146, 3, 212);
+  border: 2px solid rgb(146, 3, 212);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.button_action .descript {
+  border: 2px solid #e7720bff;
+  color: #e7720bff;
+  background-color: #fcf5ebff;
+}
+
+.button_action .descript:hover {
+  color: rgb(146, 3, 212);
+  border: 2px solid rgb(146, 3, 212);
+  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
+
+.column2 {
+  height: 90vh;
+  width: 400px;
+  background-color: #fff;
+  border-radius: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 1px 2px 5px rgb(135, 134, 134);
+  padding-top: 30px;
+  position: relative;
+  /* gap: 150px; */
+}
+
+.img_search {
+  max-width: 300px;
+  padding-top: 40%;
+}
+
+.no_msg_text {
+  max-width: 300px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  /* overflow-y: auto; */
+}
+
+.no_msg_text h2 {
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  color: rgb(37, 37, 35);
+}
+
+.p_style {
+  font-size: 1rem;
+  color: rgb(135, 134, 134);
+}
+
+.btn_copy {
+  background: transparent;
+  color: #e7720bff;
+  border: 1px solid #e7720bff;
+  display: none;
+  position: absolute;
+  bottom: 68px;
+  right: 12%;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
+.new_p_style {
+  font-size: 1.3rem;
+  font-family: "Inter", sans-serif;
+}
+
+@media (max-width: 1020px) {
+  body {
+    padding: 10px;
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+    gap: 5px;
+  }
+
+  .column1 {
+    grid-template-rows: 0.5fr 2fr 1fr;
+  }
+
+  .logo {
+    padding-left: 0px;
+  }
+
+  #text_field {
+    font-size: 1.5rem;
+    padding-left: 20px;
+  }
+
+  .buttons {
+    padding-left: 0px;
+  }
+
+  .warning {
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    width: 100%;
+  }
+
+  .button_action .cript {
+    margin-right: 0; /* Remover margem entre botões */
+  }
+
+  .column2 {
+    height: auto;
+    width: 100%;
+    padding-top: 5px;
+  }
+
+  .img_container {
+    display: none;
+  }
+
+  .no_msg_text {
+    max-width: fit-content;
+    padding: 20px;
+  }
+
+  .no_msg_text h2 {
+    font-size: 1.2rem;
+  }
+
+  .no_msg_text p {
+    font-size: 1.2rem;
+  }
+
+  .btn_copy {
+    width: 90%;
+    right: 5%;
+    bottom: 15px;
+  }
+}
