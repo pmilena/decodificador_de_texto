@@ -10,8 +10,8 @@ let new_p = document.getElementsByClassName("p_style");
 //função para evitar que letras maiúsculas, acentos e cedilhas sejam inseridas
 function digitar() {
   let texto = document.getElementsByClassName("text_field")[0];
-  let arlet = alert.length;
-  texto.addEventListener("keypress", function (event) {
+
+  texto.addEventListener("input", function (event) {
     // Unicode - caracteres especiais
     let caracteresProibidos = [
       94, // Circunflexo
@@ -36,14 +36,18 @@ function digitar() {
       245, // õ
     ];
 
-    if (caracteresProibidos.includes(event.charCode)) {
-      event.preventDefault();
+    // Remover caracteres proibidos
+    let newValue = "";
+    for (let i = 0; i < texto.value.length; i++) {
+      let charCode = texto.value.charCodeAt(i);
+      if (
+        !caracteresProibidos.includes(charCode) &&
+        !(charCode >= 65 && charCode <= 90)
+      ) {
+        newValue += texto.value[i];
+      }
     }
-
-    // letra maiúscula de A-Z (códigos ASCII de 65 a 90)
-    if (event.charCode >= 65 && event.charCode <= 90) {
-      event.preventDefault();
-    }
+    texto.value = newValue;
   });
 }
 
