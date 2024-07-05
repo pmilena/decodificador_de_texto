@@ -7,6 +7,8 @@ let copy_button = document.getElementsByClassName("btn_copy");
 let column2 = document.getElementsByClassName("column2");
 let new_p = document.getElementsByClassName("p_style");
 
+limpar(); //para manter o cursor ativo na text-area. Como foi adicionado na função limpar, subi para ativar sempre que a página for atualizada, não apenas depois de clicar nos botões
+
 //função para evitar que letras maiúsculas, acentos e cedilhas sejam inseridas
 function digitar() {
   let texto = document.getElementsByClassName("text_field")[0];
@@ -53,6 +55,7 @@ function digitar() {
 
 function limpar() {
   texto[0].value = "";
+  texto[0].focus();
 }
 
 //e=element; c=class; i=index
