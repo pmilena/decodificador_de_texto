@@ -10,7 +10,6 @@ p {
 
 body {
   background: #fff4e2;
-  padding: 10px 20px;
   box-sizing: border-box;
 }
 
@@ -19,16 +18,17 @@ body {
   grid-template-columns: 3fr 1fr;
   gap: 20px;
   height: 90vh;
+  padding: 10px 20px;
 }
 
 .column1 {
   display: grid;
   grid-template-rows: 3fr 1fr;
-  padding-left: 100px;
+  padding-left: 190px;
 }
 
 .logo {
-  padding-left: 20px;
+  padding: 40px 0 0 40px;
 }
 
 #text_field {
@@ -57,11 +57,11 @@ textarea::placeholder {
 }
 
 .btn {
-  padding: 14px;
-  border-radius: 18px;
-  font-size: 16px;
+  padding: 24px;
+  border-radius: 24px;
+  font-size: 1rem;
   font-family: "Inter", sans-serif;
-  width: 300px;
+  width: 328px;
   cursor: pointer;
   transition: all 0.8s ease;
 }
@@ -98,7 +98,7 @@ textarea::placeholder {
 }
 
 .column2 {
-  height: 90vh;
+  height: 82vh;
   width: 400px;
   background-color: #fff;
   border-radius: 32px;
@@ -108,7 +108,7 @@ textarea::placeholder {
   box-shadow: 1px 2px 5px rgb(135, 134, 134);
   padding-top: 30px;
   position: relative;
-  margin-top: -20px;
+  margin: -50px 20px 30px 0;
 
   /* gap: 150px; */
 }
@@ -122,6 +122,8 @@ textarea::placeholder {
   max-width: 300px;
   font-family: "Inter", sans-serif;
   text-align: center;
+  color: #495057;
+  font-size: 1rem;
 
   /* overflow-y: auto; */
 }
@@ -129,7 +131,7 @@ textarea::placeholder {
 .no_msg_text h2 {
   font-size: 1.5rem;
   margin-bottom: 16px;
-  color: rgb(37, 37, 35);
+  color: #343a40;
 }
 
 .p_style {
@@ -159,14 +161,22 @@ textarea::placeholder {
   font-family: "Inter", sans-serif;
 }
 
-@media (max-width: 1020px) {
-  body {
-    padding: 40px;
-  }
+.__footer {
+  background-color: #e7720bff;
+  text-align: center;
+  padding: 10px;
+  color: #fcf5ebff;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-family: "Inter", sans-serif;
+}
 
+@media (max-width: 1020px) {
   .container {
     grid-template-columns: 1fr;
     gap: 5px;
+    padding: 0 40px 40px;
   }
 
   .column1 {
@@ -175,7 +185,7 @@ textarea::placeholder {
   }
 
   .logo {
-    padding-left: 0px;
+    padding: 40px 0 0 40px;
   }
 
   #text_field {

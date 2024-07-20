@@ -1,11 +1,11 @@
 let texto = document.getElementsByClassName("text_field");
 let imagem = document.getElementsByClassName("img_container");
-let no_msg_container = document.getElementsByClassName("no_msg_text");
-let texto_h2 = document.getElementsByClassName("no_msg_text_h2");
-let texto_p = document.getElementsByClassName("no_msg_text_p");
-let copy_button = document.getElementsByClassName("btn_copy");
+let noMsgContainer = document.getElementsByClassName("no_msg_text");
+let h2Text = document.getElementsByClassName("no_msg_text_h2");
+let pText = document.getElementsByClassName("no_msg_text_p");
+let copyButton = document.getElementsByClassName("btn_copy");
 let column2 = document.getElementsByClassName("column2");
-let new_p = document.getElementsByClassName("p_style");
+let pNew = document.getElementsByClassName("p_style");
 
 limpar(); //para manter o cursor ativo na text-area. Como foi adicionado na função limpar, subi para ativar sempre que a página for atualizada, não apenas depois de clicar nos botões
 
@@ -83,14 +83,14 @@ function criptografar() {
     });
 
     addClass(imagem, "hide", 0);
-    addClass(texto_h2, "hide", 0);
-    addClass(texto_p, "hide", 0);
-    addClass(new_p, "new_p_style", 0);
+    addClass(h2Text, "hide", 0);
+    addClass(pText, "hide", 0);
+    addClass(pNew, "pNew_style", 0);
 
-    new_p[0].innerHTML = newText;
-    copy_button[0].style.display = "block";
+    pNew[0].innerHTML = newText;
+    copyButton[0].style.display = "block";
     column2[0].style.gap = "150px";
-    no_msg_container[0].style.overflow = "auto";
+    noMsgContainer[0].style.overflow = "auto";
     limpar();
   }
 }
@@ -115,14 +115,14 @@ function descriptografar() {
     });
 
     addClass(imagem, "hide", 0);
-    addClass(texto_h2, "hide", 0);
-    addClass(texto_p, "hide", 0);
-    addClass(new_p, "new_p_style", 0);
+    addClass(h2Text, "hide", 0);
+    addClass(pText, "hide", 0);
+    addClass(pNew, "pNew_style", 0);
 
-    new_p[0].innerHTML = newText;
-    copy_button[0].style.display = "block";
+    pNew[0].innerHTML = newText;
+    copyButton[0].style.display = "block";
     column2[0].style.gap = "150px";
-    no_msg_container[0].style.overflow = "auto";
+    noMsgContainer[0].style.overflow = "auto";
     limpar();
   }
 }
