@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 :root {
   --bg-primary: #e6e9f5ff;
   --font-family-primary: "Inter", sans-serif;
@@ -66,6 +65,10 @@ textarea::placeholder {
   font-size: 0.75rem;
   font-family: var(--font-family-primary);
   color: var(--primary-gray-color);
+}
+
+.icon img {
+  width: 1rem;
 }
 
 .btn {
@@ -152,6 +155,10 @@ textarea::placeholder {
   position: absolute;
   bottom: 75px;
   right: 9%;
+}
+
+.btn_copy:hover {
+  background-color: var(--bg-primary);
 }
 
 .hide {
