@@ -53,6 +53,7 @@ body {
   outline: 0;
   width: 680px;
   color: var(--primary-color);
+  resize: none;
 }
 
 textarea::placeholder {
