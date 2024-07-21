@@ -36,6 +36,10 @@ body {
 .logo {
   padding: 40px 0 0 40px;
 }
+.logo img {
+  width: 70px;
+  display: block;
+}
 
 #text_field {
   background-color: transparent;
