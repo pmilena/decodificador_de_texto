@@ -107,3 +107,43 @@ function descriptografar() {
     limpar();
   }
 }
+// //INÍCIO DARK MODE
+const switchCheckbox = document.getElementById("theme-switch");
+const body = document.body;
+const logo = document.getElementById("logo__img");
+
+function applyTheme(theme) {
+  const isDarkMode = theme === "dark";
+
+  body.classList.toggle("dark-mode", isDarkMode);
+  body.classList.toggle("light-mode", !isDarkMode);
+
+  Array.from(column2).forEach((el) => {
+    el.classList.toggle("dark-mode", isDarkMode);
+    el.classList.toggle("light-mode", !isDarkMode);
+  });
+
+  Array.from(texto).forEach((el) => {
+    el.classList.toggle("dark-mode", isDarkMode);
+    el.classList.toggle("light-mode", !isDarkMode);
+  });
+
+  Array.from(copyButton).forEach((el) => {
+    el.classList.toggle("dark-mode", isDarkMode);
+    el.classList.toggle("light-mode", !isDarkMode);
+  });
+
+  logo.src = isDarkMode ? "./assets/logo3_bg-dark.png" : "./assets/logo3.png";
+  localStorage.setItem("theme", theme);
+}
+
+// Inicializar com preferência anterior do usuário
+const savedTheme = localStorage.getItem("theme") || "light";
+switchCheckbox.checked = savedTheme === "dark";
+applyTheme(savedTheme);
+
+switchCheckbox.addEventListener("change", () => {
+  const newTheme = switchCheckbox.checked ? "dark" : "light";
+  applyTheme(newTheme);
+});
+//FIM DARK MODE

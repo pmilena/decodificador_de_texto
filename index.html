@@ -19,7 +19,19 @@
 
 <body>
   <header class="logo">
-    <div><img src="./assets/logo3.png" alt="a purple logotipo with 'MP', inside a purple and gray rectangle">
+    <div class="logo__img"><img id="logo__img" src="./assets/logo3.png"
+        alt="a purple logotipo with 'MP', inside a purple and gray rectangle">
+    </div>
+    <div class="switch-container">
+      <input type="checkbox" id="theme-switch" class="theme-switch">
+      <label for="theme-switch" class="switch-label">
+        <span class="switch-icon sun-icon">
+          <img src="./assets/sun-icon.png" alt="Sun Icon">
+        </span>
+        <span class="switch-icon moon-icon">
+          <img src="./assets/moon-icon.png" alt="Moon Icon">
+        </span>
+      </label>
     </div>
   </header>
   <main class="container">
@@ -39,7 +51,7 @@
     </div>
     <div class="column2">
       <div class="img_container">
-        <img class="img_search" src="./assets/img_search2.avif" loading="lazy"
+        <img class="img_search" src="./assets/img_search2-removebg.png" loading="lazy"
           alt="four people searching for something">
       </div>
       <div class="no_msg_text">

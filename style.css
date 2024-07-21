@@ -1,9 +1,11 @@
+@import "./styles/dark-mode.css";
 :root {
   --bg-primary: #e6e9f5ff;
   --font-family-primary: "Inter", sans-serif;
   --primary-color: #270949ff;
   --secondary-color: rgb(214, 220, 243);
   --accent-color: #4654a3ff;
+  --font-color-dark-theme: #fff;
   --primary-gray-color: rgb(135, 134, 134);
   --box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
     0 17px 50px 0 rgba(0, 0, 0, 0.19);
@@ -34,8 +36,10 @@ body {
 
 .logo {
   padding: 40px 0 0 40px;
+  display: flex;
+  gap: 52%;
 }
-.logo img {
+.logo__img img {
   width: 70px;
   display: block;
 }
@@ -198,6 +202,10 @@ textarea::placeholder {
 }
 
 @media (max-width: 1025px) {
+  .logo {
+    gap: 70%;
+  }
+
   .container {
     grid-template-columns: 1fr;
     gap: 65px;
@@ -263,6 +271,10 @@ textarea::placeholder {
 }
 
 @media (max-width: 540px) {
+  .logo {
+    gap: 50%;
+  }
+
   .button_action {
     flex-direction: column;
     gap: 10px;
