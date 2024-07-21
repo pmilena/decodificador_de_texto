@@ -9,7 +9,7 @@ let pNew = document.getElementsByClassName("p_style");
 
 const copyButtonActive = document.getElementById("btn_copy");
 const pCopy = document.getElementById("p_new");
-
+//FUNÇÃO COPIAR
 copyButtonActive.addEventListener("click", () => {
   navigator.clipboard.writeText(pCopy.textContent);
 });

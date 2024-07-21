@@ -1,4 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+:root {
+  --bg-primary: #fff4e2;
+  --font-family-primary: "Inter", sans-serif;
+  --primary-color: #e7720bff;
+  --secondary-color: #fcf5ebff;
+  --accent-color: rgb(146, 3, 212);
+  --primary-gray-color: rgb(135, 134, 134);
+  --box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
+    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+}
 
 * {
   margin: 0;
@@ -6,7 +16,7 @@
 }
 
 body {
-  background: #fff4e2;
+  background: var(--bg-primary);
   box-sizing: border-box;
 }
 
@@ -14,14 +24,13 @@ body {
   display: grid;
   grid-template-columns: 3fr 1fr;
   gap: 20px;
-  /* height: 90vh; */
   padding: 10px 20px;
 }
 
 .column1 {
   display: grid;
   grid-template-rows: 3fr 1fr;
-  padding-left: 190px;
+  padding-left: 20%;
 }
 
 .logo {
@@ -32,15 +41,15 @@ body {
   background-color: transparent;
   border: none;
   font-size: 2rem;
-  font-family: "Inter", sans-serif;
-  padding-top: 80px;
+  font-family: var(--font-family-primary);
+  padding-top: 15%;
   outline: 0;
   width: 680px;
   color: rgb(122, 60, 7);
 }
 
 textarea::placeholder {
-  color: rgb(135, 134, 134);
+  color: var(--primary-gray-color);
 }
 
 .warning {
@@ -50,16 +59,16 @@ textarea::placeholder {
 }
 
 .text_warning {
-  font-size: 12px;
-  font-family: "Inter", sans-serif;
-  color: rgb(101, 101, 101);
+  font-size: 0.75rem;
+  font-family: var(--font-family-primary);
+  color: var(--primary-gray-color);
 }
 
 .btn {
   padding: 24px;
   border-radius: 24px;
   font-size: 1rem;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family-primary);
   width: 328px;
   cursor: pointer;
   transition: all 0.8s ease;
@@ -70,30 +79,28 @@ textarea::placeholder {
   gap: 24px;
 }
 .button_action .cript {
-  background-color: #e7720bff;
-  border: 2px solid #e7720bff;
-  color: #fff4e2;
+  background-color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  color: var(--bg-primary);
   margin-right: 24px;
 }
 
 .button_action .cript:hover {
-  background-color: rgb(146, 3, 212);
-  border: 2px solid rgb(146, 3, 212);
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  box-shadow: var(--box-shadow);
 }
 
 .button_action .descript {
-  border: 2px solid #e7720bff;
-  color: #e7720bff;
-  background-color: #fcf5ebff;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 .button_action .descript:hover {
-  color: rgb(146, 3, 212);
-  border: 2px solid rgb(146, 3, 212);
-  box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24),
-    0 17px 50px 0 rgba(0, 0, 0, 0.19);
+  color: var(--accent-color);
+  border-color: var(--accent-color);
+  box-shadow: var(--box-shadow);
 }
 
 .column2 {
@@ -104,12 +111,10 @@ textarea::placeholder {
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 1px 2px 5px rgb(135, 134, 134);
+  box-shadow: 1px 2px 5px var(--primary-gray-color);
   padding-top: 30px;
   position: relative;
   margin: -50px 20px 30px 0;
-
-  /* gap: 150px; */
 }
 
 .img_search {
@@ -119,9 +124,9 @@ textarea::placeholder {
 
 .no_msg_text {
   max-width: 300px;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family-primary);
   text-align: center;
-  color: #495057;
+  color: var(--primary-gray-color);
   font-size: 1rem;
 }
 
@@ -133,14 +138,14 @@ textarea::placeholder {
 
 .p_style {
   font-size: 1.3rem;
-  color: rgb(135, 134, 134);
+  color: var(--primary-gray-color);
   text-align: left;
 }
 
 .btn_copy {
   background: transparent;
-  color: #e7720bff;
-  border: 1px solid #e7720bff;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
   display: none;
   position: absolute;
   bottom: 75px;
@@ -156,18 +161,18 @@ textarea::placeholder {
 }
 
 .new_p_style {
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family-primary);
 }
 
 .__footer {
-  background-color: #e7720bff;
+  background-color: var(--primary-color);
   text-align: center;
   padding: 10px;
-  color: #fcf5ebff;
+  color: var(--secondary-color);
   position: fixed;
   bottom: 0;
   width: 100%;
-  font-family: "Inter", sans-serif;
+  font-family: var(--font-family-primary);
 }
 
 @media (max-width: 1025px) {
@@ -182,13 +187,8 @@ textarea::placeholder {
     padding-left: 0;
   }
 
-  .logo {
-    padding: 40px 0 0 40px;
-  }
-
   #text_field {
     font-size: 1.5rem;
-    padding-top: 60px;
     width: auto;
   }
 
@@ -205,7 +205,7 @@ textarea::placeholder {
   }
 
   .button_action .cript {
-    margin-right: 0; /* Remover margem entre botões */
+    margin-right: 0;
   }
 
   .column2 {
@@ -235,7 +235,6 @@ textarea::placeholder {
   .btn_copy {
     width: 90%;
     right: 5%;
-    /* bottom: 15px; */
   }
 }
 
@@ -255,8 +254,4 @@ textarea::placeholder {
   .container {
     gap: 35px;
   }
-
-  /* .container {
-    gap: 5px;
-  } */
 }
