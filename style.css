@@ -1,9 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
-body,
-h1,
-h2,
-p {
+* {
   margin: 0;
   padding: 0;
 }
@@ -126,8 +123,6 @@ textarea::placeholder {
   text-align: center;
   color: #495057;
   font-size: 1rem;
-
-  /* overflow-y: auto; */
 }
 
 .no_msg_text h2 {
@@ -148,8 +143,8 @@ textarea::placeholder {
   border: 1px solid #e7720bff;
   display: none;
   position: absolute;
-  bottom: 68px;
-  right: 12%;
+  bottom: 75px;
+  right: 9%;
 }
 
 .hide {

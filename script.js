@@ -7,6 +7,13 @@ let copyButton = document.getElementsByClassName("btn_copy");
 let column2 = document.getElementsByClassName("column2");
 let pNew = document.getElementsByClassName("p_style");
 
+const copyButtonActive = document.getElementById("btn_copy");
+const pCopy = document.getElementById("p_new");
+
+copyButtonActive.addEventListener("click", () => {
+  navigator.clipboard.writeText(pCopy.textContent);
+});
+
 limpar(); //para manter o cursor ativo na text-area. Como foi adicionado na função limpar, subi para ativar sempre que a página for atualizada, não apenas depois de clicar nos botões
 
 //função para evitar que letras maiúsculas, acentos e cedilhas sejam inseridas
