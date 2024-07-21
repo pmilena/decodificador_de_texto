@@ -120,7 +120,7 @@ textarea::placeholder {
   box-shadow: 1px 2px 5px var(--primary-gray-color);
   padding-top: 30px;
   position: relative;
-  margin: -60px 20px 30px 0;
+  margin: -65px 20px 30px 0;
 }
 
 .img_search {
@@ -176,7 +176,7 @@ textarea::placeholder {
 .__footer {
   background-color: rgb(204, 206, 216);
   text-align: center;
-  padding: 10px;
+  padding: 5px;
   color: var(--primary-color);
   position: fixed;
   bottom: 0;
@@ -184,14 +184,16 @@ textarea::placeholder {
   font-family: var(--font-family-primary);
 }
 
-.__footer__icon {
+.__footer__flex {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 15px;
   margin-top: 0.5rem;
 }
 
-.__footer__icon img {
+.__footer__flex img {
   width: 2rem;
 }
 
