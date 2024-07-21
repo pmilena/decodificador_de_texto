@@ -16,43 +16,17 @@ copyButtonActive.addEventListener("click", () => {
 
 limpar(); //para manter o cursor ativo na text-area. Como foi adicionado na função limpar, subi para ativar sempre que a página for atualizada, não apenas depois de clicar nos botões
 
-//função para evitar que letras maiúsculas, acentos e cedilhas sejam inseridas
+//função para impedir caracteres proibidos
 function digitar() {
   let texto = document.getElementsByClassName("text_field")[0];
 
   texto.addEventListener("input", function (event) {
-    // Unicode - caracteres especiais
-    let caracteresProibidos = [
-      94, // Circunflexo
-      96, // Acento grave
-      180, // Acento agudo
-      126, // Til
-      199, // Cedilha maiúscula
-      231, // Cedilha minúscula
-      186, // Ponto e vírgula
-      224, // À
-      225, // Á
-      233, // É
-      237, // Í
-      243, // Ó
-      250, // Ú
-      232, // è
-      236, // ì
-      242, // ò
-      249, // ù
-      227, // ã
-      241, // ñ
-      245, // õ
-    ];
-
     // Remover caracteres proibidos
     let newValue = "";
     for (let i = 0; i < texto.value.length; i++) {
       let charCode = texto.value.charCodeAt(i);
-      if (
-        !caracteresProibidos.includes(charCode) &&
-        !(charCode >= 65 && charCode <= 90)
-      ) {
+      // Verifica se o caractere é uma letra minúscula
+      if ((charCode >= 97 && charCode <= 122) || charCode === 32) {
         newValue += texto.value[i];
       }
     }

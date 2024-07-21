@@ -238,9 +238,6 @@ textarea::placeholder {
   }
 }
 
-@media (max-width: 912px) {
-}
-
 @media (max-width: 540px) {
   .button_action {
     flex-direction: column;
