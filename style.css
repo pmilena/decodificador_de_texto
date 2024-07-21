@@ -174,7 +174,7 @@ textarea::placeholder {
 }
 
 .__footer {
-  background-color: var(--secondary-color);
+  background-color: rgb(204, 206, 216);
   text-align: center;
   padding: 10px;
   color: var(--primary-color);
@@ -200,6 +200,7 @@ textarea::placeholder {
     grid-template-columns: 1fr;
     gap: 65px;
     padding: 0 40px 50px;
+    margin-bottom: 30px;
   }
 
   .column1 {
@@ -255,6 +256,7 @@ textarea::placeholder {
   .btn_copy {
     width: 90%;
     right: 5%;
+    bottom: 15px;
   }
 }
 
