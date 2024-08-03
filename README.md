@@ -7,7 +7,7 @@
  
 ## Descrição
  
-Aplicação que criptografa textos, permitindo a troca de mensagens "secretas" com outras pessoas que disponham da aplicação ou saibam o segredo da criptografia utilizada. A aplicação funciona apenas com letras minúsculas, sem acentos e sem caracteres especiais. É possível converter uma palavra para a versão criptografada e também retornar uma palavra criptografada para a versão original.
+Aplicação que criptografa textos, permitindo a troca de mensagens secretas com outras pessoas que disponham da aplicação ou saibam o segredo da criptografia utilizada. A aplicação funciona apenas com letras minúsculas, sem acentos e sem caracteres especiais. É possível converter uma palavra para a versão criptografada e também retornar uma palavra criptografada para a versão original.
  
 ## Funcionalidades
  
