@@ -37,3 +37,6 @@ Com o objetivo de permitir uma melhor experiênciada pessoa usuária, a aplicaç
 <img src="./assets/dark-desktop.png" alt="dark desktop view"  width="400"/>
   <img src="./assets/dark-desktop_text.png" alt="dark desktop view with text"  width="400"/>
 </div>
+
+## Para conhecer mais
+Acesse: https://decodificador-de-texto-beryl-delta.vercel.app/
