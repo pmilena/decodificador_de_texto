@@ -15,25 +15,10 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   background: var(--bg-primary);
   box-sizing: border-box;
 }
-
-.container {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 20px;
-  padding: 10px 20px;
-}
-
-.column1 {
-  display: grid;
-  grid-template-rows: 3fr 1fr;
-  padding-left: 20%;
-}
-
 .logo {
   padding: 40px 0 0 40px;
   display: flex;
@@ -43,7 +28,17 @@ body {
   width: 70px;
   display: block;
 }
-
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 10px 20px;
+}
+.column1 {
+  display: grid;
+  grid-template-rows: 3fr 1fr;
+  padding-left: 20%;
+}
 #text_field {
   background-color: transparent;
   border: none;
@@ -55,7 +50,6 @@ body {
   color: var(--primary-color);
   resize: none;
 }
-
 textarea::placeholder {
   color: var(--primary-gray-color);
 }
@@ -65,17 +59,18 @@ textarea::placeholder {
   gap: 2px;
   margin-bottom: 16px;
 }
-
+.icon img {
+  width: 1rem;
+}
 .text_warning {
   font-size: 0.75rem;
   font-family: var(--font-family-primary);
   color: var(--primary-gray-color);
 }
-
-.icon img {
-  width: 1rem;
+.button_action {
+  display: flex;
+  gap: 24px;
 }
-
 .btn {
   padding: 24px;
   border-radius: 24px;
@@ -86,37 +81,28 @@ textarea::placeholder {
   cursor: pointer;
   transition: all 0.8s ease;
 }
-
-.button_action {
-  display: flex;
-  gap: 24px;
-}
 .button_action .cript {
   background-color: var(--primary-color);
   color: var(--bg-primary);
   margin-right: 24px;
 }
-
 .button_action .cript:hover {
   background-color: var(--accent-color);
   border-color: var(--accent-color);
   box-shadow: var(--box-shadow);
 }
-
 .button_action .descript {
   color: var(--primary-color);
   background-color: var(--secondary-color);
 }
-
 .button_action .descript:hover {
   color: var(--accent-color);
   border-color: var(--accent-color);
   box-shadow: var(--box-shadow);
 }
-
 .column2 {
-  height: 82vh;
-  width: 400px;
+  height: 80vh;
+  width: 390px;
   background-color: #fff;
   border-radius: 32px;
   display: flex;
@@ -127,12 +113,10 @@ textarea::placeholder {
   position: relative;
   margin: -65px 20px 30px 0;
 }
-
 .img_search {
   max-width: 300px;
   padding-top: 40%;
 }
-
 .no_msg_text {
   max-width: 300px;
   font-family: var(--font-family-primary);
@@ -140,44 +124,36 @@ textarea::placeholder {
   color: var(--primary-gray-color);
   font-size: 1rem;
 }
-
 .no_msg_text h2 {
   font-size: 1.5rem;
   margin-bottom: 16px;
   color: #343a40;
 }
-
 .p_style {
   font-size: 1.3rem;
   color: var(--primary-gray-color);
   text-align: left;
 }
-
 .btn_copy {
   background: transparent;
   color: var(--primary-color);
   display: none;
   position: absolute;
-  bottom: 75px;
+  bottom: 70px;
   right: 9%;
 }
-
 .btn_copy:hover {
   background-color: var(--bg-primary);
 }
-
 .hide {
   display: none;
 }
-
 .show {
   display: block;
 }
-
 .new_p_style {
   font-family: var(--font-family-primary);
 }
-
 .__footer {
   background-color: rgb(204, 206, 216);
   text-align: center;
@@ -188,7 +164,6 @@ textarea::placeholder {
   width: 100%;
   font-family: var(--font-family-primary);
 }
-
 .__footer__flex {
   display: flex;
   flex-wrap: wrap;
@@ -197,73 +172,59 @@ textarea::placeholder {
   gap: 15px;
   margin-top: 0.5rem;
 }
-
 .__footer__flex img {
   width: 2rem;
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1340px) {
   .logo {
     gap: 70%;
   }
-
   .container {
     grid-template-columns: 1fr;
     gap: 65px;
     padding: 0 40px 50px;
     margin-bottom: 30px;
   }
-
   .column1 {
     grid-template-rows: 7fr 1fr;
     padding-left: 0;
   }
-
   #text_field {
     font-size: 1.5rem;
     width: auto;
   }
-
   .buttons {
     padding-left: 0px;
   }
-
   .warning {
     margin-bottom: 10px;
   }
-
   .btn {
     width: 100%;
   }
-
   .button_action .cript {
     margin-right: 0;
   }
-
   .column2 {
     height: fit-content;
     width: 100%;
     padding-top: 5px;
     margin: inherit;
   }
-
   .img_container {
     display: none;
   }
-
   .no_msg_text {
     max-width: fit-content;
     padding: 20px 5px;
   }
-
   .no_msg_text h2 {
     font-size: 1.2rem;
   }
-
   .no_msg_text p {
     font-size: 1.2rem;
   }
-
   .btn_copy {
     width: 90%;
     right: 5%;
@@ -275,17 +236,14 @@ textarea::placeholder {
   .logo {
     gap: 50%;
   }
-
-  .button_action {
-    flex-direction: column;
-    gap: 10px;
-  }
-
   .column1 {
     grid-template-rows: 2fr 1fr;
   }
-
   .container {
     gap: 35px;
+  }
+  .button_action {
+    flex-direction: column;
+    gap: 10px;
   }
 }
